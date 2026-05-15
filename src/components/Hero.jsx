@@ -1,10 +1,22 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaArrowRight, FaWhatsapp } from 'react-icons/fa';
+import { FaArrowRight, FaBars, FaCalendarAlt, FaTimes, FaWhatsapp } from 'react-icons/fa';
 import { images } from '../assets/images.js';
 import { whatsappUrl } from './data.js';
 import Logo from './Logo.jsx';
 
+const navLinks = [
+  { label: 'About', href: '#about' },
+  { label: 'Menu', href: '#menu' },
+  { label: 'Gallery', href: '#gallery' },
+  { label: 'Contact', href: '#contact' },
+];
+
 export default function Hero() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const closeMenu = () => setIsMenuOpen(false);
+
   return (
     <section id="home" className="relative min-h-screen bg-coffee-900 text-coffee-50">
       <img
@@ -17,12 +29,54 @@ export default function Hero() {
         <nav className="section-shell flex items-center justify-between py-5">
           <Logo light />
           <div className="hidden items-center gap-7 text-sm font-semibold text-coffee-50/85 md:flex">
-            <a className="transition hover:text-saffron" href="#about">About</a>
-            <a className="transition hover:text-saffron" href="#menu">Menu</a>
-            <a className="transition hover:text-saffron" href="#gallery">Gallery</a>
-            <a className="transition hover:text-saffron" href="#contact">Contact</a>
+            {navLinks.map((link) => (
+              <a key={link.href} className="transition hover:text-saffron" href={link.href}>
+                {link.label}
+              </a>
+            ))}
           </div>
+          <button
+            type="button"
+            className="grid h-11 w-11 place-items-center rounded-full border border-coffee-50/25 bg-coffee-50/10 text-coffee-50 backdrop-blur transition hover:border-saffron hover:text-saffron md:hidden"
+            onClick={() => setIsMenuOpen((current) => !current)}
+            aria-label={isMenuOpen ? 'Close mobile menu' : 'Open mobile menu'}
+            aria-expanded={isMenuOpen}
+          >
+            {isMenuOpen ? <FaTimes /> : <FaBars />}
+          </button>
         </nav>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.25 }}
+            className="section-shell md:hidden"
+          >
+            <div className="rounded-[8px] border border-coffee-50/20 bg-coffee-900/95 p-4 shadow-glow backdrop-blur">
+              <div className="grid gap-2">
+                {navLinks.map((link) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    onClick={closeMenu}
+                    className="rounded-[8px] px-4 py-3 text-sm font-bold text-coffee-50 transition hover:bg-coffee-50/10 hover:text-saffron"
+                  >
+                    {link.label}
+                  </a>
+                ))}
+                <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  onClick={closeMenu}
+                  className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-saffron px-5 py-3 text-sm font-extrabold text-coffee-900 transition hover:bg-coffee-50"
+                >
+                  <FaWhatsapp /> Order on WhatsApp
+                </a>
+              </div>
+            </div>
+          </motion.div>
+        )}
       </div>
       <div className="section-shell relative z-10 flex min-h-screen items-center pb-16 pt-28">
         <motion.div
@@ -42,6 +96,9 @@ export default function Hero() {
           <div className="mt-9 flex flex-col gap-4 sm:flex-row">
             <a className="btn-primary" href={whatsappUrl} target="_blank" rel="noreferrer">
               <FaWhatsapp /> Order on WhatsApp
+            </a>
+            <a className="btn-secondary" href="#contact">
+              <FaCalendarAlt /> Book a Table
             </a>
             <a className="btn-secondary" href="#menu">
               Explore Menu <FaArrowRight />

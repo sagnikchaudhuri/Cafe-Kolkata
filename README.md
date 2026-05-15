@@ -135,7 +135,7 @@ npm run preview
 All WhatsApp buttons open this order link:
 
 ```text
-https://wa.me/919000000000?text=Hi%20I%20want%20to%20order%20from%20Cafe%20Kolkata%20Demo
+https://wa.me/91XXXXXXXXXX?text=Hi%2C%20I%20want%20to%20order%20from%20Cafe%20Kolkata%20Demo
 ```
 
 <<<<<<< HEAD
@@ -150,7 +150,7 @@ src/components/data.js
 The QR code points to:
 
 ```text
-https://cafekolkata-demo.vercel.app
+https://cafe-kolkata-jq1p.vercel.app/
 ```
 
 Update the QR destination in:
@@ -203,8 +203,8 @@ For a real client launch, connect the domain in Vercel, replace placeholder cont
 
 This project is available for demo and client presentation use.
 =======
-- QR target: `https://cafekolkata-demo.vercel.app`
-- WhatsApp order URL: `https://wa.me/919000000000?text=Hi%20I%20want%20to%20order%20from%20Cafe%20Kolkata%20Demo`
+- QR target: `https://cafe-kolkata-jq1p.vercel.app/`
+- WhatsApp order URL: `https://wa.me/91XXXXXXXXXX?text=Hi%2C%20I%20want%20to%20order%20from%20Cafe%20Kolkata%20Demo`
 
   <img width="1881" height="970" alt="Cafe Kolkata _ Fresh Brews   Cozy Bites - Your Chrome - Microsoft​ Edge 08-05-2026 00_08_54" src="https://github.com/user-attachments/assets/14f945a6-b09e-4564-aba7-b3890619a54a" />
 

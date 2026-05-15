@@ -4,8 +4,8 @@ import { whatsappUrl } from './data.js';
 const contactItems = [
   {
     icon: FaMapMarkerAlt,
-    title: 'Address',
-    text: '12 Park Street Area, Kolkata, West Bengal 700016',
+    title: 'Demo Location',
+    text: 'Demo Location: Park Street Area, Kolkata',
   },
   {
     icon: FaPhoneAlt,
@@ -28,6 +28,9 @@ export default function Contact() {
           <h2 className="mt-4 font-display text-4xl font-extrabold text-coffee-900 sm:text-5xl">
             Stop by for coffee or order ahead.
           </h2>
+          <p className="mt-5 text-base leading-7 text-coffee-600">
+            Replace with your café’s real address, phone number, and map before launch.
+          </p>
         </div>
         <div className="mt-12 grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="space-y-4">

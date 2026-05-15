@@ -2,10 +2,21 @@ import { FaInstagram, FaFacebookF, FaWhatsapp } from 'react-icons/fa';
 import { GiCoffeeBeans, GiCupcake, GiTeapot } from 'react-icons/gi';
 import { MdBakeryDining } from 'react-icons/md';
 
-export const whatsappUrl =
-  'https://wa.me/919000000000?text=Hi%20I%20want%20to%20order%20from%20Cafe%20Kolkata%20Demo';
+export const SITE_URL = 'https://cafe-kolkata-jq1p.vercel.app/';
 
-export const qrTarget = 'https://cafekolkata-demo.vercel.app';
+// Replace this with the real client cafe WhatsApp number before launch.
+export const WHATSAPP_NUMBER = '+91XXXXXXXXXX';
+export const WHATSAPP_MESSAGE = 'Hi, I want to order from Cafe Kolkata Demo';
+
+// Replace these with the real client cafe social links before launch.
+export const INSTAGRAM_URL = 'https://instagram.com/cafe-kolkata-demo';
+export const FACEBOOK_URL = 'https://facebook.com/cafe-kolkata-demo';
+
+export const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER.replace('+', '')}?text=${encodeURIComponent(
+  WHATSAPP_MESSAGE,
+)}`;
+
+export const qrTarget = SITE_URL;
 
 export const stats = [
   {
@@ -113,7 +124,29 @@ export const menuCategories = [
 ];
 
 export const socials = [
-  { label: 'Instagram', icon: FaInstagram, href: '#' },
-  { label: 'Facebook', icon: FaFacebookF, href: '#' },
+  { label: 'Instagram', icon: FaInstagram, href: INSTAGRAM_URL },
+  { label: 'Facebook', icon: FaFacebookF, href: FACEBOOK_URL },
   { label: 'WhatsApp', icon: FaWhatsapp, href: whatsappUrl },
+];
+
+export const testimonials = [
+  {
+    quote: 'The cold brew is smooth and the place feels peaceful.',
+    name: 'Riya S.',
+  },
+  {
+    quote: 'Perfect spot for evening adda and quick snacks.',
+    name: 'Arjun M.',
+  },
+  {
+    quote: 'The QR menu and WhatsApp ordering made it super easy.',
+    name: 'Sneha D.',
+  },
+];
+
+export const ownerBenefits = [
+  'WhatsApp ordering without app installation',
+  'QR menu for tables, counters, and flyers',
+  'Better online presence than only Zomato/Swiggy listings',
+  'Easy updates for menu, photos, and offers',
 ];
