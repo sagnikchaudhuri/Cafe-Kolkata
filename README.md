@@ -138,6 +138,7 @@ All WhatsApp buttons open this order link:
 https://wa.me/919000000000?text=Hi%20I%20want%20to%20order%20from%20Cafe%20Kolkata%20Demo
 ```
 
+<<<<<<< HEAD
 Update the phone number and message in:
 
 ```text
@@ -201,3 +202,11 @@ For a real client launch, connect the domain in Vercel, replace placeholder cont
 ## License
 
 This project is available for demo and client presentation use.
+=======
+- QR target: `https://cafekolkata-demo.vercel.app`
+- WhatsApp order URL: `https://wa.me/919000000000?text=Hi%20I%20want%20to%20order%20from%20Cafe%20Kolkata%20Demo`
+
+  <img width="1881" height="970" alt="Cafe Kolkata _ Fresh Brews   Cozy Bites - Your Chrome - Microsoft​ Edge 08-05-2026 00_08_54" src="https://github.com/user-attachments/assets/14f945a6-b09e-4564-aba7-b3890619a54a" />
+
+<img width="1873" height="969" alt="Cafe Kolkata _ Fresh Brews   Cozy Bites - Your Chrome - Microsoft​ Edge 08-05-2026 00_09_36" src="https://github.com/user-attachments/assets/9eb4c5e6-6969-4c69-a209-ba402afdb442" />
+>>>>>>> 0215f7b71f4bf01e7a08e63c05819eac63cfb457
