@@ -97,9 +97,6 @@ export default function Hero() {
             <a className="btn-primary" href={whatsappUrl} target="_blank" rel="noreferrer">
               <FaWhatsapp /> Order on WhatsApp
             </a>
-            <a className="btn-secondary" href="#contact">
-              <FaCalendarAlt /> Book a Table
-            </a>
             <a className="btn-secondary" href="#menu">
               Explore Menu <FaArrowRight />
             </a>
